@@ -1,0 +1,112 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+
+  .input {
+    border: 1px solid #000;
+  }
+
+  .window {
+    position: absolute;
+    padding: 16px;
+    min-width: 300px;
+    background: #fff;
+    border: 1px solid #ccc;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+
+    transition-duration: 0.2s;
+    transition-property: opacity, visibility;
+
+    &_opened {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &_horizontal {
+      display: flex;
+    }
+  }
+
+  .header {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__date {
+      display: flex;
+      gap: 4px;
+    }
+  }
+
+  .weekdays {
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .weekday {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    font-size: 12px;
+  }
+
+  .weeks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .week {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px 10px;
+  }
+
+  .day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+
+    &_today {
+      border: 1px solid #000;
+    }
+
+    &_selected-start {
+      background: green;
+    }
+
+    &_selected-end {
+      background: blue;
+    }
+
+    &_range {
+      background: blue;
+      opacity: 0.5;
+    }
+
+    &_hidden {
+      transition: none;
+      opacity: 0;
+      visibility: 0;
+    }
+
+    &_less-min,
+    &_more-max {
+      opacity: 0.3;
+    }
+  }
+
+  .arrow {
+    &_hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}

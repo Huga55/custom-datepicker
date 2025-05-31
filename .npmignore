@@ -1,0 +1,16 @@
+src/
+test/
+*.test.ts
+*.log
+node_modules/
+playground/
+public/
+vite.config.*
+tsconfig.json
+.npmignore
+.gitignore
+.babelrc
+.eslintrc
+.prettierrc
+yarn.lock
+tsconfig.json
